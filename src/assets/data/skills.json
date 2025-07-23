@@ -2,81 +2,81 @@
   {
     "name": "JavaScript",
     "category": "frontend",
-    "icon": "./src/assets/icons/polygon.svg"
+    "icon": "/icons/polygon.svg"
   },
   {
     "name": "TypeScript",
     "category": "frontend",
-    "icon": "./src/assets/icons/polygon.svg"
+    "icon": "/icons/polygon.svg"
   },
   {
     "name": "HTML",
     "category": "frontend",
-    "icon": "./src/assets/icons/polygon.svg"
+    "icon": "/icons/polygon.svg"
   },
   {
     "name": "CSS",
     "category": "frontend",
-    "icon": "./src/assets/icons/square.svg"
+    "icon": "/icons/square.svg"
   },
   {
     "name": "Tailwind CSS",
     "category": "frontend",
-    "icon": "./src/assets/icons/square.svg"
+    "icon": "/icons/square.svg"
   },
   {
     "name": "React",
     "category": "frontend",
-    "icon": "./src/assets/icons/box.svg"
+    "icon": "/icons/box.svg"
   },
   {
     "name": "Next.js",
     "category": "frontend",
-    "icon": "./src/assets/icons/box.svg"
+    "icon": "/icons/box.svg"
   },
   {
     "name": "Node.js",
     "category": "backend",
-    "icon": "./src/assets/icons/polygon.svg"
+    "icon": "/icons/polygon.svg"
   },
   {
     "name": "Express.js",
     "category": "backend",
-    "icon": "./src/assets/icons/polygon.svg"
+    "icon": "/icons/polygon.svg"
   },
   {
     "name": "React Native",
     "category": "mobile",
-    "icon": "./src/assets/icons/box.svg"
+    "icon": "/icons/box.svg"
   },
   {
     "name": "MongoDB",
     "category": "database",
-    "icon": "./src/assets/icons/db.svg"
+    "icon": "/icons/db.svg"
   },
   {
     "name": "SQL",
     "category": "database",
-    "icon": "./src/assets/icons/db.svg"
+    "icon": "/icons/db.svg"
   },
   {
     "name": "PostgreSQL",
     "category": "database",
-    "icon": "./src/assets/icons/db.svg"
+    "icon": "/icons/db.svg"
   },
   {
     "name": "MySQL",
     "category": "database",
-    "icon": "./src/assets/icons/db.svg"
+    "icon": "/icons/db.svg"
   },
   {
     "name": "Git",
     "category": "tool",
-    "icon": "./src/assets/icons/git.svg"
+    "icon": "/icons/git.svg"
   },
   {
     "name": "Docker",
     "category": "tool",
-    "icon": "./src/assets/icons/docker.svg"
+    "icon": "/icons/docker.svg"
   }
 ]
