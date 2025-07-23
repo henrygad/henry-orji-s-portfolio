@@ -1,47 +1,44 @@
 [
-    {
-        "id": "1",
-        "category": "tool",        
-        "title": "BlogForge — AI-Powered Blog Generator CLI",
-        "description": "BlogForge is a local-first, AI-powered CLI tool that lets users generate structured blog content directly from their terminal. Built with Node.js, it saves blog posts (Markdown, HTML, metadata) to the user's system for personal or professional use.",
-        "technologies": "BlogForge is built entirely with Node.js and TypeScript, using no external frameworks. It leverages core Node.js modules like fs, path, and os to manage file creation and directory resolution across platforms. The CLI is bundled using Tsup for efficient builds, while TSX and Nodemon are used during development for live reloading and TypeScript execution. The project also includes a custom-built test runner, no third-party testing libraries, and a lightweight server built with the native http module to preview blog files locally.",
-        "challenges_and_solution": "I wanted to build a fully local blog generator that works offline and gives users control over where and how their content is saved. One challenge was managing blog file structures across OS environments. I solved this by dynamically resolving file paths using Node's os and fs modules. Also, integrating both human-written and AI-generated flows cleanly in the CLI required careful design of argument parsing.",
-        "display_image_one": "/src/assets/images/blogforge_display_image_one.png",
-        "display_image_two": "/src/assets/images/blogforge_display_image_two.png",
-        "npm_link": "https://www.npmjs.com/package/@henry0rji/blogforge",
-        "github_link": "https://github.com/henrygad/BlogForge.git",
-        "demo_link":""
-    },
-    {
-        "id": "2",
-        "category": "library",        
-        "title": "Makzontexteditor — Custom Rich Text Editor for the Modern Web",
-        "description": "Makzontexteditor is a lightweight, customizable rich text editor designed for modern web applications. It provides essential formatting features like bold, italic, underline, headings, fonts, insert image and vidoe, colors, enbed code, link, and lists through intuitive action buttons. Instead of relying on heavy third-party libraries, it uses the native window.getSelection API to manipulate content directly, keeping the editor fast and flexible. Packaged as an npm library, it is ideal for use in blogs, CMS platforms, and admin dashboards.",
-        "technologies": "The editor is built using React and TypeScript to ensure modular, strongly typed components. Tailwind CSS powers the styling with utility-first classes for consistent and responsive design. Vite was used as the build tool for fast development and hot module replacement. The codebase is bundled using tsup, which outputs both CommonJS and ESM formats. All of this is packaged and distributed via npm, making it simple to integrate into any React project.",
-        "challenges_and_solution": "A major challenge was building rich text formatting without using bulky libraries like Draft.js or Slate. To solve this, the editor leverages the native window.getSelection and document.createElement APIs to apply inline formatting. This required careful handling of selection ranges and edge cases like overlapping tags. Another challenge was ensuring that the editor remained lightweight and portable across React apps. This was achieved by keeping the styling scoped and exposing customizable props, while using tsup to exclude unnecessary dependencies from the final bundle.",
-        "display_image_one": "/src/assets/images/Makzontexteditor.png",
-        "display_image_two": "/src/assets/images/makzonrichtexteditor-moblie.png",
-        "npm_link": "https://www.npmjs.com/package/makzontexteditor",
-        "github_link": "https://github.com/henrygad/makzontexteditor.git",
-        "demo_link":"https://makzontexteditor.netlify.app/"
-    },    
-    {
-        "id": "3",
-        "category": "web",
-        "title": " Makzon — A Social Blogging Web App Interface",
-        "description": "Makzon Frontend is the client-side application of a full-stack social blogging platform designed to give users a rich and interactive experience for writing and engaging with blog content. It supports multiple functionalities such as signing up, logging in (via email or Google), creating and editing blog posts using a custom rich text editor, viewing a personalized feed, checking trending posts, following favorite authors, liking and unliking posts and comments, saving posts, and managing a detailed profile. The application is structured around a collection of dynamic pages and subpages like the feed, trending, search results, saved posts, add post, and a fully detailed user profile. Each profile displays information such as profile photo, name, username, profession, country, biography, links, followers and following stats, and a follow/unfollow button. Inside the Add Post page, users can switch between media uploads, drafts, unpublished posts, and the post editor powered by the integrated MakzonTextEditor. The design emphasizes both functionality and usability, offering a full social blogging experience directly from the browser.",
-        "technologies": "The frontend is built with React 19 and TypeScript, providing a modern and type-safe development environment. Styling is handled using Tailwind CSS along with tailwind-styled-components to enable easy, component-level design control. For routing, the app uses React Router DOM, and state management is partially handled with React Redux and React Context where appropriate. Form validation and control are done through React Hook Form in combination with Yup. For data fetching, caching, and managing server state, React Query is used alongside Axios for communicating with the backend API. JS Cookie is used to handle cookie-based authentication tokens sent by the server, enabling session management. The project is built and served using Vite, with Vitest and Testing Library powering the testing setup. A custom-made npm package, makzontexteditor, is also integrated into the app to allow rich post editing with features like formatted text, media support, and dynamic content rendering.",
-        "challenges_and_solution": "One of the key challenges during development was ensuring secure and persistent authentication between the frontend and backend using cookies, especially while dealing with CORS restrictions and session timing. This was resolved by carefully configuring HTTP-only cookies on the server, and making sure all credentials were sent with cross-origin requests. Another major challenge was managing the complex UI structure, especially the nested tab system in the Add Post and Profile pages where different data and layouts are conditionally rendered without breaking the user experience. This was handled with precise local state management, controlled routing, and clear separation of UI logic into components. Integrating the custom MakzonTextEditor also introduced layout and styling challenges, especially with responsiveness and consistent data binding, which were overcome by refining its container layout and maintaining a clean interface between the editor and the form state. Together, these solutions helped deliver a smooth, scalable, and interactive frontend experience for the Makzon platform.",
-        "display_image_one": "/src/assets/images/makzon-front-end-desktop.png",
-        "display_image_two": "/src/assets/images/makzon-front-end-mobile.png",
-        "npm_link": "",
-        "github_link": "https://github.com/henrygad/makzon-front-end.git",
-        "demo_link":"https://makzon-front-end.onrender.com/"
-    }
+  {
+    "id": "1",
+    "category": "tool",
+    "title": "BlogForge — AI-Powered Blog Generator CLI",
+    "description": "BlogForge is a local-first, AI-powered CLI tool that lets users generate structured blog content directly from their terminal. Built with Node.js, it saves blog posts (Markdown, HTML, metadata) to the user's system for personal or professional use.",
+    "technologies": "BlogForge is built entirely with Node.js and TypeScript, using no external frameworks. It leverages core Node.js modules like fs, path, and os to manage file creation and directory resolution across platforms. The CLI is bundled using Tsup for efficient builds, while TSX and Nodemon are used during development for live reloading and TypeScript execution. The project also includes a custom-built test runner, no third-party testing libraries, and a lightweight server built with the native http module to preview blog files locally.",
+    "challenges_and_solution": "I wanted to build a fully local blog generator that works offline and gives users control over where and how their content is saved. One challenge was managing blog file structures across OS environments. I solved this by dynamically resolving file paths using Node's os and fs modules. Also, integrating both human-written and AI-generated flows cleanly in the CLI required careful design of argument parsing.",
+    "display_image_one": "./src/assets/images/display-image-for-blogfore-one.jpg",
+    "display_image_two": "./src/assets/images/display-image-for-blogfore-two.jpg",
+    "npm_link": "https://www.npmjs.com/package/@henry0rji/blogforge",
+    "github_link": "https://github.com/henrygad/BlogForge.git",
+    "demo_link": ""
+  },
+  {
+    "id": "2",
+    "category": "library",
+    "title": "Makzontexteditor — Custom Rich Text Editor for the Modern Web",
+    "description": "Makzontexteditor is a lightweight, customizable rich text editor designed for modern web applications. It provides essential formatting features like bold, italic, underline, headings, fonts, insert image and vidoe, colors, enbed code, link, and lists through intuitive action buttons. Instead of relying on heavy third-party libraries, it uses the native window.getSelection API to manipulate content directly, keeping the editor fast and flexible. Packaged as an npm library, it is ideal for use in blogs, CMS platforms, and admin dashboards.",
+    "technologies": "The editor is built using React and TypeScript to ensure modular, strongly typed components. Tailwind CSS powers the styling with utility-first classes for consistent and responsive design. Vite was used as the build tool for fast development and hot module replacement. The codebase is bundled using tsup, which outputs both CommonJS and ESM formats. All of this is packaged and distributed via npm, making it simple to integrate into any React project.",
+    "challenges_and_solution": "A major challenge was building rich text formatting without using bulky libraries like Draft.js or Slate. To solve this, the editor leverages the native window.getSelection and document.createElement APIs to apply inline formatting. This required careful handling of selection ranges and edge cases like overlapping tags. Another challenge was ensuring that the editor remained lightweight and portable across React apps. This was achieved by keeping the styling scoped and exposing customizable props, while using tsup to exclude unnecessary dependencies from the final bundle.",
+    "display_image_one": "/src/assets/images/display-image-for-makzonrichtexteditor-one.jpg",
+    "display_image_two": "/src/assets/images/display-image-for-makzonrichtexteditor-one.jpg",
+    "npm_link": "https://www.npmjs.com/package/makzontexteditor",
+    "github_link": "https://github.com/henrygad/makzontexteditor.git",
+    "demo_link": "https://makzontexteditor.netlify.app/"
+  },
+  {
+    "id": "3",
+    "category": "web",
+    "title": " Makzon — A Social Blogging Web App Interface",
+    "description": "Makzon Frontend is the client-side application of a full-stack social blogging platform designed to give users a rich and interactive experience for writing and engaging with blog content. It supports multiple functionalities such as signing up, logging in (via email or Google), creating and editing blog posts using a custom rich text editor, viewing a personalized feed, checking trending posts, following favorite authors, liking and unliking posts and comments, saving posts, and managing a detailed profile. The application is structured around a collection of dynamic pages and subpages like the feed, trending, search results, saved posts, add post, and a fully detailed user profile. Each profile displays information such as profile photo, name, username, profession, country, biography, links, followers and following stats, and a follow/unfollow button. Inside the Add Post page, users can switch between media uploads, drafts, unpublished posts, and the post editor powered by the integrated MakzonTextEditor. The design emphasizes both functionality and usability, offering a full social blogging experience directly from the browser.",
+    "technologies": "The frontend is built with React 19 and TypeScript, providing a modern and type-safe development environment. Styling is handled using Tailwind CSS along with tailwind-styled-components to enable easy, component-level design control. For routing, the app uses React Router DOM, and state management is partially handled with React Redux and React Context where appropriate. Form validation and control are done through React Hook Form in combination with Yup. For data fetching, caching, and managing server state, React Query is used alongside Axios for communicating with the backend API. JS Cookie is used to handle cookie-based authentication tokens sent by the server, enabling session management. The project is built and served using Vite, with Vitest and Testing Library powering the testing setup. A custom-made npm package, makzontexteditor, is also integrated into the app to allow rich post editing with features like formatted text, media support, and dynamic content rendering.",
+    "challenges_and_solution": "One of the key challenges during development was ensuring secure and persistent authentication between the frontend and backend using cookies, especially while dealing with CORS restrictions and session timing. This was resolved by carefully configuring HTTP-only cookies on the server, and making sure all credentials were sent with cross-origin requests. Another major challenge was managing the complex UI structure, especially the nested tab system in the Add Post and Profile pages where different data and layouts are conditionally rendered without breaking the user experience. This was handled with precise local state management, controlled routing, and clear separation of UI logic into components. Integrating the custom MakzonTextEditor also introduced layout and styling challenges, especially with responsiveness and consistent data binding, which were overcome by refining its container layout and maintaining a clean interface between the editor and the form state. Together, these solutions helped deliver a smooth, scalable, and interactive frontend experience for the Makzon platform.",
+    "display_image_one": "/src/assets/images/display-image-for-makzon-frontend-one.jpg",
+    "display_image_two": "/src/assets/images/display-image-for-makzon-frontend-two.jpg",
+    "npm_link": "",
+    "github_link": "https://github.com/henrygad/makzon-front-end.git",
+    "demo_link": "https://makzon-front-end.onrender.com/"
+  }
 ] 
-
-
-
 
 
 

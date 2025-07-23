@@ -13,7 +13,7 @@ const item = {
     },
 };
 
-const Skill = ({ skill, index }: { skill: string, index: number }) => {
+const Skill = ({ name, icon, index }: { name: string, icon: string, index: number }) => {
     return <motion.div
         key={index}
         variants={item}
@@ -21,9 +21,12 @@ const Skill = ({ skill, index }: { skill: string, index: number }) => {
             scale: 1.05,
             boxShadow: "0 4px 12px rgba(255, 105, 180, 0.4)",
         }}
-        className="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full transition-all bg-[#243647] pl-4 pr-4"
+        className="text-white flex flex-1 gap-3 rounded-lg border border-[#344d65] bg-[#1a2632] p-4 items-center"
     >
-        <p className="text-white text-sm font-medium leading-normal">{skill}</p>
+        <div className="flex justify-start">
+            <img src={icon} alt={name}/>
+        </div>
+        <h2 className="text-base font-bold leading-tight">{name}</h2>
     </motion.div>
 };
 

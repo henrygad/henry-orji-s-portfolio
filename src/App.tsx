@@ -96,7 +96,10 @@ const App = () => {
           <div className="sm:p-4">
             <HeroSlider
               className="flex min-h-[480px] flex-col gap-10 sm:gap-8 items-start justify-end px-4 pb-10 sm:px-10"
-              images={Projects.map(project => (project.display_image_one, project.display_image_two))}
+              images={[
+                ...Projects.map(project => (project.display_image_one)),
+                ...Projects.map(project => (project.display_image_two))
+              ]}
             >
               <div className="size-full absolute top-0 right-0 left-0 bottom-0 bg-black/15 z-10" />
               <div className="flex flex-col jus gap-2 text-left z-10">
@@ -145,7 +148,80 @@ const App = () => {
                 always learning and improving across software architecture, accessibility, and performance.
               </p>
 
-              <h3 className="text-xl font-semibold mb-4">🚀 Projects I’m Proud Of</h3>
+              <h2 className="text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                My Journey
+              </h2>
+
+              <div className="grid grid-cols-[40px_1fr] gap-x-2 px-4">
+                <div className="flex flex-col items-center gap-1 pt-3">
+                  <div className="" data-icon="Code" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="w-[1.5px] bg-[#344d65] h-2 grow"></div>
+                </div>
+                <div className="flex flex-1 flex-col py-3">
+                  <p className=" text-base font-medium leading-normal">Early Days</p>
+                  <p className="text-[#93adc8] text-base font-normal leading-normal">Started coding as a hobby, exploring various programming languages and frameworks.</p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-[1.5px] bg-[#344d65] h-2"></div>
+                  <div className="" data-icon="CodaLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M176,88a39.79,39.79,0,0,1,21.53,6.1A12,12,0,0,0,216,84V48a16,16,0,0,0-16-16H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V172a12,12,0,0,0-18.44-10.11c-7.25,4.65-13.41,6.41-21.24,6.11H176a40,40,0,0,1,0-80Zm-56,40a56.07,56.07,0,0,0,55.84,56A48.37,48.37,0,0,0,200,178.89V208H56V48H200V77.23A56.3,56.3,0,0,0,120,128Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="w-[1.5px] bg-[#344d65] h-2 grow"></div>
+                </div>
+                <div className="flex flex-1 flex-col py-3">
+                  <p className=" text-base font-medium leading-normal">First Project</p>
+                  <p className="text-[#93adc8] text-base font-normal leading-normal">
+                    Developed my first full-stack web application, gaining hands-on experience with front-end and back-end technologies.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="w-[1.5px] bg-[#344d65] h-2"></div>
+                  <div className="" data-icon="Briefcase" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="w-[1.5px] bg-[#344d65] h-2 grow"></div>
+                </div>
+                <div className="flex flex-1 flex-col py-3">
+                  <p className=" text-base font-medium leading-normal">Professional Growth</p>
+                  <p className="text-[#93adc8] text-base font-normal leading-normal">
+                    Joined a dynamic team, contributing to multiple projects and honing my skills in agile development.
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-1 pb-3">
+                  <div className="w-[1.5px] bg-[#344d65] h-2"></div>
+                  <div data-icon="Target" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col py-3">
+                  <p className="text-base font-medium leading-normal">Current Focus</p>
+                  <p className="text-[#93adc8] text-base font-normal leading-normal">
+                    Currently focused on building scalable and user-centric applications, leveraging cutting-edge technologies.
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                🚀 Projects I’m Proud Of 
+              </h3>
 
               <div className="mb-6">
                 <h4 className="text-xl font-bold text-gray-400">
@@ -177,10 +253,33 @@ const App = () => {
           ref={skillsSectionRef}
           className="@container size-auto min-h-[320px] flex flex-col gap-y-10 justify-center py-10"
         >
-          <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Skills</h2>
+          <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            Skills
+          </h2>
+
           <SkillsSection
-            skills={Skills}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-6"
+            title="Frontend Development"
+            skills={Skills.filter(skill=> skill.category === "frontend")}
+          />
+
+          <SkillsSection
+            title="Backend Development"
+            skills={Skills.filter(skill => skill.category === "backend")}
+          />
+          
+          <SkillsSection
+            title="Mobile Development"
+            skills={Skills.filter(skill => skill.category === "mobile")}         
+          />
+        
+          <SkillsSection
+            title="DataBase Development"
+            skills={Skills.filter(skill => skill.category === "database")}     
+          />
+                 
+          <SkillsSection
+            title="Development Tools"
+            skills={Skills.filter(skill => skill.category === "tool")}        
           />
         </section>
         {/* Projects section */}
@@ -303,4 +402,5 @@ const App = () => {
 };
 
 export default App;
+
 

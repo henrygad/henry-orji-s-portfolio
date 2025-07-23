@@ -22,15 +22,14 @@ const Project = ({ project }: Props) => {
             transition={{
                 duration: 0.4, type: "spring", stiffness: 100
             }}
-            key={project.id}
-            className="w-full  flex flex-col items-center gap-3 pb-3 cursor-pointer"
+            key={project.id}            
+            className='flex flex-col gap-3 pb-3 max-w-82 cursor-pointer'
             onClick={() => handleModal(true)}
-        >
-            <div
-                className="size-fix bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-8 rounded-2xl shadow-lg"                
-            >
-                <img src={project.display_image_one} alt="Project Screenshot" className="w-fit h-[280px] mx-auto object-cover rounded-xl shadow-2xl" />
-            </div>           
+        >         
+            <div              
+                className='w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg'
+                style={{ backgroundImage: `url('${project.display_image_one}')`}}
+            />                           
             <div className='size-full'>
                 <p className="text-white text-base font-medium leading-normal text-nowrap whitespace-pre truncate max-w-full">
                     {project.title}
@@ -72,14 +71,18 @@ const Project = ({ project }: Props) => {
                         {project.description}
                     </p>
                     <div className="flex w-full grow @container p-4">
-                        <div className="w-full gap-1 overflow-hidden @[480px]:gap-2 aspect-[3/2] rounded-xl grid grid-cols-[2fr_1fr_1fr]">
+                        <div className="w-full gap-1 overflow-hidden @[480px]:gap-2 aspect-[3/2] rounded-xl grid grid-cols-[2fr_1fr_1fr]">                            
                             <div
-                                className="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none row-span-2"
-                                style={{ backgroundImage: `linear-gradient(rgba(17,26,34, 1) 0%, rgba(38, 82, 125, 0.4) 100%), url('${project.display_image_one}')` }}
-                            ></div >
+                                className="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none row-span-2"
+                                style={{
+                                    backgroundImage: `url(${project.display_image_one})`
+                                }}
+                            ></div>
                             <div
-                                className="w-full bg-center bg-no-repeat bg-contain aspect-auto rounded-none col-span-2 row-span-2"
-                                style={{ backgroundImage: `linear-gradient(rgba(17,26,34, 1) 0%, rgba(38, 82, 125, 0.4) 100%), url('${project.display_image_two}')` }}
+                                className="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none col-span-2 row-span-2"
+                                style={{
+                                    backgroundImage: `url(${project.display_image_two})`
+                                }}
                             ></div>
                         </div >
                     </div >

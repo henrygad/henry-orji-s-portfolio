@@ -32,7 +32,7 @@ const HeroSlider = ({ children, images, className = "" }: Props) => {
             <AnimatePresence>
                 <motion.div
                     key={images[index]}
-                    style={{ backgroundImage: `linear-gradient(rgba(17,26,34, 1) 0%, rgba(38, 82, 125, 0.4) 100%), url('${images[index]}')`, zIndex: 0 }}
+                    style={{ backgroundImage: `linear-gradient(rgba(0,0,0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url('${images[index]}')`, zIndex: 0 }}
                     variants={fadeVariants}
                     initial="initial"
                     animate="animate"
@@ -41,7 +41,7 @@ const HeroSlider = ({ children, images, className = "" }: Props) => {
                         duration: 1.6,
                         ease: "easeInOut",
                     }}
-                    className="absolute inset-0 w-full h-full bg-contain bg-center bg-no-repeat sm:rounded-xl"
+                    className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat sm:rounded-xl"
                 />
             </AnimatePresence>
             {children}
