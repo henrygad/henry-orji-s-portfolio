@@ -75,7 +75,7 @@ const Project = ({ project }: Props) => {
                             <div
                                 className="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none row-span-2"
                                 style={{
-                                    backgroundImage: `url(${project.display_image_one})`
+                                    backgroundImage: `url(${project.display_image_two})`
                                 }}
                             ></div>
                             <div

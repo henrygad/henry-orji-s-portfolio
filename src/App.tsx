@@ -96,10 +96,7 @@ const App = () => {
           <div className="sm:p-4">
             <HeroSlider
               className="flex min-h-[480px] flex-col gap-10 sm:gap-8 items-start justify-end px-4 pb-10 sm:px-10"
-              images={[
-                ...Projects.map(project => (project.display_image_one)),
-                ...Projects.map(project => (project.display_image_two))
-              ]}
+              images={Projects.map(project => (project.display_image_one))}
             >
               <div className="size-full absolute top-0 right-0 left-0 bottom-0 bg-black/15 z-10" />
               <div className="flex flex-col jus gap-2 text-left z-10">
@@ -273,7 +270,7 @@ const App = () => {
           />
         
           <SkillsSection
-            title="DataBase Development"
+            title="Database Development"
             skills={Skills.filter(skill => skill.category === "database")}     
           />
                  

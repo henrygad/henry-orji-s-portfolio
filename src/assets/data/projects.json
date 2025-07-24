@@ -20,7 +20,7 @@
     "technologies": "The editor is built using React and TypeScript to ensure modular, strongly typed components. Tailwind CSS powers the styling with utility-first classes for consistent and responsive design. Vite was used as the build tool for fast development and hot module replacement. The codebase is bundled using tsup, which outputs both CommonJS and ESM formats. All of this is packaged and distributed via npm, making it simple to integrate into any React project.",
     "challenges_and_solution": "A major challenge was building rich text formatting without using bulky libraries like Draft.js or Slate. To solve this, the editor leverages the native window.getSelection and document.createElement APIs to apply inline formatting. This required careful handling of selection ranges and edge cases like overlapping tags. Another challenge was ensuring that the editor remained lightweight and portable across React apps. This was achieved by keeping the styling scoped and exposing customizable props, while using tsup to exclude unnecessary dependencies from the final bundle.",
     "display_image_one": "/images/display-image-for-makzonrichtexteditor-one.jpg",
-    "display_image_two": "/images/display-image-for-makzonrichtexteditor-one.jpg",
+    "display_image_two": "/images/display-image-for-makzonrichtexteditor-two.jpg",
     "npm_link": "https://www.npmjs.com/package/makzontexteditor",
     "github_link": "https://github.com/henrygad/makzontexteditor.git",
     "demo_link": "https://makzontexteditor.netlify.app/"
