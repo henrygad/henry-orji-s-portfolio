@@ -1,5 +1,5 @@
 
-import profileImage from "../assets/images/portfolio-profile.jpg"
+import profileImage from "../assets/images/portfolio-profile.png"
 
 const Logo = () => {
     return <span className='flex justify-start items-center gap-x-1'>

@@ -13,7 +13,7 @@ import useAutoNavigate from "./hooks/useAutoNavigate";
 import HeroSlider from "./hero-slider/Index";
 import Skills from "./assets/data/skills.json";
 import SocialMediaLinks from "./assets/data/socialMediaLinks.json";
-import profileImage from "./assets/images/portfolio-profile.jpg"
+import profileImage from "./assets/images/portfolio-profile.png"
 import Projects from "./assets/data/projects.json";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -86,7 +86,7 @@ const App = () => {
         </span>
       </motion.nav>
     </header>
-    <main className="size-full flex justify-center py-5">
+    <main className="size-full flex justify-center">
       <div className="flex flex-col max-w-[960px] flex-1">
         {/* Hero section */}
         <section
@@ -96,7 +96,10 @@ const App = () => {
           <div className="sm:p-4">
             <HeroSlider
               className="flex min-h-[480px] flex-col gap-10 sm:gap-8 items-start justify-end px-4 pb-10 sm:px-10"
-              images={Projects.map(project => (project.display_image_one))}
+              images={[
+                ...Projects.map(project => (project.display_image_one)),
+                ...Projects.map(project => (project.display_image_two)),
+              ]}
             >
               <div className="size-full absolute top-0 right-0 left-0 bottom-0 bg-black/15 z-10" />
               <div className="flex flex-col jus gap-2 text-left z-10">

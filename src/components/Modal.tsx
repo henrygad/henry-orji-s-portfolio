@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import {useRef, type ReactNode } from "react";
-import useClickOutSide from "../hooks/useClickOutSide";
+//import useClickOutSide from "../hooks/useClickOutSide";
 
 type Props = {
     isOpen: boolean;
@@ -35,7 +35,7 @@ const modal = {
 
 const Modal = ({ isOpen, onClose, children, layoutId, className = "" }: Props) => {
     const modalRef = useRef<HTMLDivElement>(null);
-    useClickOutSide(modalRef, onClose);    
+    //useClickOutSide(modalRef, onClose);    
     return (
         <AnimatePresence>
             {isOpen && (

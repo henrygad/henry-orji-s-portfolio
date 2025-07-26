@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import useAutoNavigate from "../hooks/useAutoNavigate";
-import useClickOutSide from "../hooks/useClickOutSide";
+//import useClickOutSide from "../hooks/useClickOutSide";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
@@ -23,7 +23,7 @@ const Mobilenav = ({ active, setActive, navList }: Props) => {
     const dropDownRef = useRef<HTMLElement>(null);
     const [dropDown, setDropDown] = useState(false);
     const autoNavigate = useAutoNavigate();
-    useClickOutSide(dropDownRef, () => setDropDown(false));
+   // useClickOutSide(dropDownRef, () => setDropDown(false));
 
     useEffect(() => {
         if (dropDown) {

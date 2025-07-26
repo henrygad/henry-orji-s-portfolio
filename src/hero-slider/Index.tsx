@@ -41,7 +41,7 @@ const HeroSlider = ({ children, images, className = "" }: Props) => {
                         duration: 1.6,
                         ease: "easeInOut",
                     }}
-                    className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat sm:rounded-xl"
+                    className="absolute inset-0 w-full h-full bg-contain bg-center bg-repeat sm:rounded-xl"
                 />
             </AnimatePresence>
             {children}
