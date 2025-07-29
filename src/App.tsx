@@ -66,7 +66,7 @@ const App = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, controls]);
 
-  return < div className="font-main relative size-full bg-[rgb(17,26,34)] dark">
+  return < div className="font-main relative size-full bg-[#111a22] dark">
     <header className="@container size-full min-h-16 whitespace-nowrap">
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
